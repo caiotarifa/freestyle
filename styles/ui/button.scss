@@ -1,0 +1,53 @@
+.ui.button {
+  background: $primary-color;
+  border: 0;
+  border-radius: $radius;
+  color: $white;
+  padding: 15px 40px;
+  text-decoration: none;
+
+  &, &-group { display: inline-block; }
+
+  // States
+  &:focus { outline: 0; }
+
+  // Colors
+  @each $name, $color in $colors {
+    &.#{$name}, &-group.#{$name} & { background-color: $color; }
+    &.hollow.#{$name}, &-group.hollow.#{$name} & {
+      border-color: $color;
+      color: $color;
+    }
+  }
+
+  // Hollow
+  &.hollow, &-group.hollow & {
+    background: transparent;
+    border: $border-width solid $primary-color;
+    color: $primary-color;
+  }
+
+
+  // Radius
+  &.squared { border-radius: 0; }
+  &.circle { border-radius: $radius-circle; }
+  &.rounded { border-radius: $radius-rounded; }
+
+  &-group.squared & { border-radius: 0; }
+
+  &-group.rounded &:first-child { border-radius: 0 0 $radius-rounded $radius-rounded; }
+  &-group.rounded &:last-child { border-radius: $radius-rounded $radius-rounded 0 0; }
+
+
+  // Sizes
+  &.large, &-group.large & {
+    font-size: 110%;
+    padding: 20px 50px;
+  }
+
+  &.small, &-group.small & {
+    font-size: 90%;
+    padding: 5px 30px
+  }
+
+}

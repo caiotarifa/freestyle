@@ -1,0 +1,42 @@
+.ui.menu {
+
+  .title {
+    &, a {
+      color: $gray;
+      font-size: 90%;
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+
+  ul {
+    border-bottom: $border-width solid $gray;
+    list-style-type: none;
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  li {
+    a {
+      border-radius: $radius;
+      color: $black;
+      transition: background 250ms, color 250ms;
+
+      &:hover {
+        background: $primary-color;
+        color: $white;
+      }
+    }
+  }
+
+}

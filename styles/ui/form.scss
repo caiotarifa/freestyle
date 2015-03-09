@@ -1,0 +1,28 @@
+.ui.form {
+
+  input {
+    @include placeholder {
+      color $gray;
+    }
+  }
+
+  #{$all-text-inputs} {
+    border: $border-width solid $gray;
+    border-radius: $radius;
+    color: $black;
+
+    // States
+    @each $state, $color in $states {
+      &.#{$state} { border-color: $color; }
+    }
+
+    // Sizes
+    &.small {}
+  }
+
+  #{$all-text-inputs-focus}, #{$all-text-inputs-hover} { border-color: $primary-color; }
+
+  // Search
+  input[type="search"] { border-radius: $radius-rounded; }
+
+}

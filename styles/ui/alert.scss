@@ -1,0 +1,39 @@
+.ui.alert {
+  background: $gray;
+  border-radius: $radius;
+  color: $black;
+  margin-bottom: 20px;
+  padding: 20px;
+
+  &:last-child { margin-bottom: 0; }
+
+  > p {
+    &:first-child { margin-top: 0; }
+    &:last-child { margin-bottom: 0; }
+  }
+
+  // States
+  @each $state, $color in $states {
+    &.#{$state} {
+      background: $color;
+      color: $white;
+    }
+  }
+
+  // Close
+  .close {
+    color: inherit;
+    position: relative;
+    top: -5px;
+  }
+
+  // Buttons
+  .ui.button {
+    background: rgba($white, 0.25);
+    color: $white;
+    transition: background 250ms;
+    &:focus, &:hover { background: rgba($white, 0.35); }
+    &:active { background: rgba($white, 0.2); }
+  }
+
+}

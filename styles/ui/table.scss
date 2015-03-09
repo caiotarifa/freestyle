@@ -1,0 +1,30 @@
+.ui.table {
+  border: 0;
+  text-align: left;
+  width: 100%;
+
+  th, td {
+    border-bottom: $border-width solid $gray;
+    padding: 12px 10px;
+    transition: color 250ms;
+  }
+
+  th { color: $gray; }
+
+  > thead th { font-size: 90%; }
+
+  > tbody tr:last-child {
+    th, td { border-bottom: 0; }
+  }
+
+  > tbody tr {
+    &.active {
+      th, td { color: $primary-color; }
+    }
+
+    &:last-child {
+      th, td { border-bottom: 0; }
+    }
+  }
+
+}

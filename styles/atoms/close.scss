@@ -1,0 +1,17 @@
+.close {
+  appearance: none;
+  background: 0;
+  border: 0;
+  color: $white;
+  cursor: pointer;
+  float: right;
+  font-size: 30px;
+  line-height: 1;
+  opacity: 0.3;
+  padding: 0;
+  text-decoration: none;
+  text-shadow: 0 1px 0 $black;
+  transition: opacity 250ms;
+
+  &:focus, &:hover { opacity: 1; }
+}
